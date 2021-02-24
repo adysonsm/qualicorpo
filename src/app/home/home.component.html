@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row p-md-5">
+        <div class="col-md-6 col-12 offset-md-5">
+            <div class="row mt-5">
+                <div class="col-md-6 col-sm-12">
+                    <select class="form-select w-100 " aria-label="Default select example"
+                        (change)="selectedUfs($event.target.value)">
+                        <option selected>Selecione a cidade que deseja pesquisar</option>
+                        <option *ngFor="let uf of ufs" [value]="uf.id">{{uf.nome}}</option>
+                    </select>
+                </div>
+                <div class="col-md-6 col-sm-12  mt-md-0 mt-4">
+                    <select class="form-select w-100 " aria-label="Default select example"
+                        (change)="selectedUfs($event.target.value)">
+                        <option selected>Selecione a cidade</option>
+                        <option *ngFor="let uf of ufs" [value]="uf.id">{{uf.nome}}</option>
+                    </select>
+                </div>
+                <div class="col-md-6  mt-4 col-sm-12">
+                    <select class="form-select w-100 " aria-label="Default select example">
+                        <option *ngFor="let city of cities" value="1">{{city.nome}}</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mt-4 col-sm-12">
+                    <select class="form-select w-100 " aria-label="Default select example">
+                        <option *ngFor="let city of cities" value="1">{{city.nome}}</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 mt-4 offset-md-3">
+                    <button type="button" class="btn btn-primary w-100">Buscar Resultados</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+
+    </div>
+</div>
